@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>San Luis Obispo · A Family Dossier · June 25&ndash;28, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+:root{
+  --ink:#1B2A41;
+  --ink-soft:#3B4A61;
+  --teal:#0E5C63;
+  --teal-deep:#0A454A;
+  --teal-tint:#E3EFEE;
+  --brass:#A8762E;
+  --brass-deep:#8A5F22;
+  --brass-tint:#F4E9D2;
+  --terracotta:#B5572A;
+  --terracotta-deep:#943F1A;
+  --terracotta-tint:#F6E4D6;
+  --paper:#FCFBF8;
+  --paper-alt:#F3F1EB;
+  --line:#DCD6C7;
+  --charcoal:#272622;
+  --charcoal-soft:#5A574E;
+  --white:#FFFFFF;
+  --shadow:0 6px 24px rgba(27,42,65,0.08);
+  --shadow-sm:0 2px 10px rgba(27,42,65,0.07);
+  --radius:14px;
+  --font-display:'Fraunces', serif;
+  --font-body:'Inter', -apple-system, sans-serif;
+  --font-mono:'IBM Plex Mono', monospace;
+  --maxw:880px;
+}
+
+/* ============================================================
+   DARK MODE
+   ============================================================ */
+[data-theme="dark"]{
+  --paper:#1C1E23;
+  --paper-alt:#22252B;
+  --white:#1E2128;
+  --charcoal:#DDD9D0;
+  --charcoal-soft:#958F87;
+  --ink-soft:#7A94A8;
+  --line:#333028;
+  --teal-tint:#071A1C;
+  --brass-tint:#1E1508;
+  --terracotta-tint:#200D06;
+  --shadow:0 6px 24px rgba(0,0,0,0.4);
+  --shadow-sm:0 2px 10px rgba(0,0,0,0.3);
+}
+[data-theme="dark"] body{background:var(--paper);color:var(--charcoal);}
+[data-theme="dark"] h1,[data-theme="dark"] h2,[data-theme="dark"] h3,[data-theme="dark"] h4{color:#C5D5E8;}
+[data-theme="dark"] .nav-wrap{background:rgba(28,30,35,0.97);border-bottom-color:var(--line);}
+[data-theme="dark"] .nav-link{color:#8E9BAA;}
+[data-theme="dark"] .nav-brand{color:#C5D5E8;}
+[data-theme="dark"] .hero{background:var(--paper);}
+[data-theme="dark"] .hero .dek{color:#958F87;}
+[data-theme="dark"] .hero-meta{border-color:var(--line);}
+[data-theme="dark"] .hero-meta div{border-color:var(--line);}
+[data-theme="dark"] .hero-meta strong{color:#C5D5E8;}
+[data-theme="dark"] .entry__content{background:var(--white);border-color:var(--line);}
+[data-theme="dark"] .entry__content p,[data-theme="dark"] .entry__content li{color:#C8C3BB;}
+[data-theme="dark"] .fork-intro{background:var(--white);border-color:var(--line);}
+[data-theme="dark"] .fork-intro p{color:#958F87;}
+[data-theme="dark"] .fork-tab{background:var(--white);border-color:var(--line);color:var(--charcoal-soft);}
+[data-theme="dark"] .info-card{background:var(--white);border-color:var(--line);}
+[data-theme="dark"] .info-card dd{color:#C8C3BB;}
+[data-theme="dark"] .info-card p{color:#958F87;}
+[data-theme="dark"] .weather-cell{background:var(--white);}
+[data-theme="dark"] .weather-strip{background:var(--line);border-color:var(--line);}
+[data-theme="dark"] .day-weather-card{background:var(--white);border-color:var(--line);}
+[data-theme="dark"] .day-weather-card .dw-cond{color:#C8C3BB;}
+[data-theme="dark"] .day-weather-card .dw-note{color:#958F87;}
+[data-theme="dark"] table.drive-table td{border-color:var(--line);}
+[data-theme="dark"] table.drive-table th{border-bottom-color:#C5D5E8;}
+[data-theme="dark"] .budget-table td,[data-theme="dark"] .budget-table th{border-color:var(--line);}
+[data-theme="dark"] .source-cat h4{border-color:var(--line);}
+[data-theme="dark"] .source-cat li a{color:#7A94A8;}
+[data-theme="dark"] details.alt-item{background:var(--white);border-color:var(--line);}
+[data-theme="dark"] details.alt-item summary{color:#C5D5E8;}
+[data-theme="dark"] details.alt-item p{color:#958F87;}
+[data-theme="dark"] .etiquette-item{background:var(--paper-alt);}
+[data-theme="dark"] .etiquette-item p{color:#958F87;}
+[data-theme="dark"] .day-intro{color:#958F87;border-color:var(--brass);}
+[data-theme="dark"] a{color:#5A9EAA;}
+[data-theme="dark"] a:hover{color:#7AC0CA;}
+[data-theme="dark"] .gallery-link{color:#5A9EAA;border-bottom-color:#5A9EAA;}
+[data-theme="dark"] .addr{color:#958F87;}
+[data-theme="dark"] .trivia-card{background:#1A1608;border-color:#3D2E10;}
+[data-theme="dark"] .trivia-card h4{color:#D4A94A;}
+[data-theme="dark"] .trivia-card li{color:#C8C3BB;}
+[data-theme="dark"] .smart-tip{background:#071A1C;border-color:#1A3535;}
+[data-theme="dark"] .smart-tip h4{color:#C5D5E8;}
+[data-theme="dark"] .smart-tip li{color:#8FBFBF;}
+[data-theme="dark"] .fork-choice.a{background:#200D06;border-color:#5A2510;}
+[data-theme="dark"] .fork-choice.b{background:#071A1C;border-color:#1A3535;}
+[data-theme="dark"] .fork-choice.c{background:#1E1508;border-color:#3D2E10;}
+[data-theme="dark"] .concierge-note{background:#0F1115;border:1px solid var(--line);}
+[data-theme="dark"] footer p{color:#958F87;}
+[data-theme="dark"] footer .eyebrow{color:var(--brass);}
+
+/* Theme toggle button */
+.nav-theme{
+  background:none; border:1.5px solid var(--line); border-radius:20px;
+  padding:6px 12px; cursor:pointer; font-size:15px; color:var(--charcoal-soft);
+  margin-left:6px; transition:border-color .15s;
+  flex:0 0 auto; line-height:1;
+}
+.nav-theme:hover{border-color:var(--brass);}
+
+/* Daily weather grid */
+.day-weather-grid{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+  background:var(--line); border-radius:var(--radius); overflow:hidden;
+  border:1px solid var(--line); margin:20px 0;
+}
+.day-weather-card{
+  background:var(--white); padding:16px 14px;
+}
+.day-weather-card .dw-day{
+  font-family:var(--font-mono); font-size:10px; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--brass-deep); font-weight:600;
+}
+.day-weather-card .dw-temps{
+  font-family:var(--font-display); font-size:22px; font-weight:600;
+  color:var(--ink); margin:5px 0 3px; display:flex; align-items:baseline; gap:6px;
+}
+.day-weather-card .dw-temps .lo{font-size:15px; color:var(--charcoal-soft); font-weight:400;}
+.day-weather-card .dw-cond{font-size:12.5px; color:var(--charcoal); margin-bottom:4px;}
+.day-weather-card .dw-note{font-family:var(--font-mono); font-size:10px; color:var(--charcoal-soft); line-height:1.4;}
+@media (max-width:600px){.day-weather-grid{grid-template-columns:repeat(2,1fr);}}
+
+/* Trivia card */
+.trivia-card{
+  background:linear-gradient(135deg, var(--brass-tint), #F8F0E0);
+  border:1px solid #D4B87A; border-radius:var(--radius);
+  padding:20px 24px; margin:30px 0 8px;
+}
+.trivia-card .eyebrow{color:var(--brass-deep);}
+.trivia-card h4{font-size:16px; margin:6px 0 10px; color:var(--brass-deep);}
+.trivia-card ul{margin:0; padding-left:18px;}
+.trivia-card li{font-size:14px; margin-bottom:7px; color:var(--ink-soft);}
+.trivia-card li:last-child{margin-bottom:0;}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:var(--font-body);
+  color:var(--charcoal);
+  background:var(--paper);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+}
+
+h1,h2,h3,h4{
+  font-family:var(--font-display);
+  color:var(--ink);
+  margin:0 0 .4em 0;
+  font-weight:600;
+  letter-spacing:-0.01em;
+}
+p{margin:0 0 1em 0;}
+a{color:var(--teal-deep); text-decoration-color:rgba(14,92,99,0.35);}
+a:hover{text-decoration-color:currentColor;}
+.container{max-width:var(--maxw); margin:0 auto; padding:0 22px;}
+.eyebrow{
+  font-family:var(--font-mono);
+  font-size:11.5px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--brass-deep);
+  font-weight:600;
+}
+.kicker{
+  font-family:var(--font-mono);
+  font-size:12px;
+  letter-spacing:.06em;
+  color:var(--charcoal-soft);
+}
+
+/* ============================================================
+   STICKY NAV
+   ============================================================ */
+.nav-wrap{
+  position:sticky; top:0; z-index:50;
+  background:rgba(252,251,248,0.92);
+  backdrop-filter:saturate(160%) blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  max-width:var(--maxw); margin:0 auto;
+  display:flex; align-items:center; gap:4px;
+  padding:0 10px;
+  overflow-x:auto;
+  -ms-overflow-style:none; scrollbar-width:none;
+}
+.nav-inner::-webkit-scrollbar{display:none;}
+.nav-brand{
+  font-family:var(--font-display);
+  font-weight:600; font-size:15px; color:var(--ink);
+  padding:12px 12px 12px 4px; white-space:nowrap;
+  border-right:1px solid var(--line); margin-right:4px;
+}
+.nav-link{
+  font-family:var(--font-mono);
+  font-size:12px; letter-spacing:.04em;
+  color:var(--ink-soft);
+  text-decoration:none;
+  padding:14px 11px;
+  white-space:nowrap;
+  border-bottom:2px solid transparent;
+  transition:color .15s, border-color .15s;
+}
+.nav-link:hover, .nav-link.active{color:var(--teal-deep); border-bottom-color:var(--brass);}
+.nav-print{
+  margin-left:auto; flex:0 0 auto;
+  font-family:var(--font-mono); font-size:11.5px; letter-spacing:.05em;
+  background:var(--ink); color:var(--paper);
+  border:none; border-radius:20px;
+  padding:8px 16px; cursor:pointer;
+  white-space:nowrap;
+}
+.nav-print:hover{background:var(--teal-deep);}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative;
+  padding:68px 0 46px;
+  background:
+    radial-gradient(ellipse 700px 280px at 18% 0%, rgba(14,92,99,0.10), transparent 60%),
+    radial-gradient(ellipse 600px 260px at 100% 10%, rgba(181,87,42,0.07), transparent 60%),
+    var(--paper);
+  border-bottom:1px solid var(--line);
+  overflow:hidden;
+}
+.hero-route{position:absolute; right:-40px; top:10px; width:280px; opacity:.55; pointer-events:none;}
+.hero-route svg{width:100%; display:block;}
+.hero h1{
+  font-size:clamp(34px,6vw,54px);
+  line-height:1.04;
+  margin-top:10px;
+  max-width:640px;
+}
+.hero .dek{
+  font-size:17px; color:var(--charcoal-soft); max-width:480px; margin-top:14px;
+}
+.hero-meta{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:0;
+  margin-top:34px; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  max-width:620px;
+}
+.hero-meta div{padding:14px 16px 14px 0; border-right:1px solid var(--line);}
+.hero-meta div:last-child{border-right:none;}
+.hero-meta .eyebrow{display:block; margin-bottom:4px;}
+.hero-meta strong{font-family:var(--font-display); font-size:16px; color:var(--ink); font-weight:600;}
+@media (max-width:640px){
+  .hero-route{display:none;}
+  .hero-meta{grid-template-columns:repeat(2,1fr);}
+}
+
+/* ============================================================
+   CONFIRMED RESERVATIONS STRIP
+   ============================================================ */
+.confirmed-strip{padding:30px 0; background:var(--ink);}
+.confirmed-grid{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+  background:rgba(255,255,255,0.12); border-radius:var(--radius); overflow:hidden;
+}
+.confirmed-card{background:var(--ink); padding:18px 18px 16px; color:var(--paper);}
+.confirmed-card .ck-day{font-family:var(--font-mono); font-size:11px; letter-spacing:.08em; color:#9FB4C4; text-transform:uppercase;}
+.confirmed-card .ck-title{font-family:var(--font-display); font-size:17px; font-weight:600; margin:6px 0 8px; color:#fff; line-height:1.2;}
+.confirmed-card .ck-sub{font-size:13px; color:#C9D6DE; line-height:1.4;}
+.confirmed-card .ck-badge{
+  display:inline-flex; align-items:center; gap:5px;
+  font-family:var(--font-mono); font-size:10.5px; letter-spacing:.07em;
+  color:var(--brass-tint); background:rgba(168,118,46,0.28);
+  border:1px solid rgba(168,118,46,0.55);
+  padding:3px 9px; border-radius:20px; margin-top:10px;
+}
+@media (max-width:760px){.confirmed-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:480px){.confirmed-grid{grid-template-columns:1fr;}}
+
+/* ============================================================
+   SECTION GENERAL
+   ============================================================ */
+section.day{padding:58px 0 10px;}
+.section-head{margin-bottom:30px;}
+.section-head .num{
+  font-family:var(--font-mono); font-size:13px; color:var(--brass-deep);
+  letter-spacing:.1em;
+}
+.section-head h2{font-size:clamp(26px,4vw,36px); margin-top:4px;}
+.section-head .tagline{font-style:italic; color:var(--charcoal-soft); font-family:var(--font-display); font-size:17px; margin-top:6px;}
+.day-budget{
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:var(--font-mono); font-size:12.5px;
+  background:var(--paper-alt); border:1px solid var(--line);
+  padding:6px 14px; border-radius:20px; margin-top:14px; color:var(--ink-soft);
+}
+.day-budget b{color:var(--ink); font-size:13px;}
+.day-intro{
+  font-family:var(--font-display); font-style:italic; font-size:18px;
+  color:var(--ink-soft); line-height:1.5; max-width:680px;
+  border-left:3px solid var(--brass); padding-left:18px; margin:22px 0 36px;
+}
+
+/* ============================================================
+   TIMELINE ENTRY
+   ============================================================ */
+.timeline{position:relative;}
+.timeline::before{
+  content:""; position:absolute; left:84px; top:6px; bottom:6px; width:1px;
+  background:var(--line);
+}
+@media (max-width:600px){.timeline::before{left:60px;}}
+
+.entry{
+  display:grid; grid-template-columns:84px 1fr; gap:22px;
+  margin-bottom:34px; position:relative;
+}
+@media (max-width:600px){.entry{grid-template-columns:60px 1fr; gap:14px;}}
+.entry__time{padding-top:3px; position:relative;}
+.entry__time::after{
+  content:""; position:absolute; right:-22px; top:6px; width:9px; height:9px;
+  border-radius:50%; background:var(--paper); border:2px solid var(--brass);
+}
+@media (max-width:600px){.entry__time::after{right:-14px;}}
+.entry__clock{
+  display:block; font-family:var(--font-mono); font-weight:600; font-size:14px;
+  color:var(--ink); letter-spacing:.01em;
+}
+.entry__sub{display:block; font-family:var(--font-mono); font-size:10.5px; color:var(--charcoal-soft); margin-top:3px; line-height:1.3;}
+.entry__content{
+  background:var(--white); border:1px solid var(--line); border-radius:var(--radius);
+  padding:20px 22px 18px; box-shadow:var(--shadow-sm);
+}
+.entry__title{
+  font-size:18px; display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;
+  margin-bottom:8px;
+}
+.entry__content p{font-size:14.5px; color:var(--charcoal); margin-bottom:.7em;}
+.entry__content p:last-child{margin-bottom:0;}
+.entry__content ul{margin:.4em 0 0; padding-left:0; list-style:none;}
+.entry__content li{
+  font-size:14px; padding-left:16px; position:relative; margin-bottom:6px; color:var(--charcoal);
+}
+.entry__content li::before{content:"–"; position:absolute; left:0; color:var(--brass-deep);}
+.entry__content li b, .entry__content li strong{color:var(--ink);}
+.entry__content strong{color:var(--ink);}
+.addr{font-family:var(--font-mono); font-size:13px; color:var(--ink-soft); display:block; margin-top:6px;}
+
+/* badges */
+.badge{
+  display:inline-flex; align-items:center; gap:5px; font-family:var(--font-mono);
+  font-size:11px; letter-spacing:.04em; padding:3px 10px; border-radius:20px; font-weight:500;
+  white-space:nowrap;
+}
+.badge--confirmed{background:#E5F2EA; color:#2D6B45; border:1px solid #BFE0CC;}
+.badge--time{background:var(--teal-tint); color:var(--teal-deep); border:1px solid #B7D6D5;}
+.badge--optional{background:var(--brass-tint); color:var(--brass-deep); border:1px solid #DDBE82;}
+
+/* gallery link */
+.gallery-link{
+  display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono);
+  font-size:11.5px; color:var(--teal-deep); margin-top:10px; text-decoration:none;
+  border-bottom:1px dotted var(--teal-deep);
+}
+.gallery-link::before{content:"\25A3"; font-size:11px;}
+
+/* smart tip box */
+.smart-tip{
+  background:linear-gradient(135deg, var(--teal-tint), #EFF6F1);
+  border:1px solid #BFDAD7; border-radius:var(--radius);
+  padding:20px 24px; margin:30px 0 8px; position:relative;
+}
+.smart-tip .eyebrow{color:var(--teal-deep);}
+.smart-tip h4{font-size:16px; margin:6px 0 10px;}
+.smart-tip ul{margin:0; padding-left:18px;}
+.smart-tip li{font-size:14px; margin-bottom:7px; color:var(--ink-soft);}
+.smart-tip li:last-child{margin-bottom:0;}
+
+/* concierge / rewards note */
+.concierge-note{
+  background:var(--ink); color:var(--paper); border-radius:var(--radius);
+  padding:20px 24px; margin:24px 0;
+}
+.concierge-note .eyebrow{color:var(--brass-tint);}
+.concierge-note h4{color:#fff; font-size:16px; margin:6px 0 10px;}
+.concierge-note p, .concierge-note li{color:#D6DEE6; font-size:14px;}
+.concierge-note ul{margin:0; padding-left:18px;}
+.concierge-note li{margin-bottom:6px;}
+.concierge-note li:last-child{margin-bottom:0;}
+.concierge-note b{color:#fff;}
+
+/* ============================================================
+   SATURDAY FORK
+   ============================================================ */
+.fork-intro{
+  background:var(--white); border:1px solid var(--line); border-radius:var(--radius);
+  padding:22px 24px; margin:8px 0 28px; box-shadow:var(--shadow-sm);
+}
+.fork-intro h4{font-size:17px; margin-bottom:10px;}
+.fork-choice-grid{display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin-top:14px;}
+@media (max-width:700px){.fork-choice-grid{grid-template-columns:1fr;}}
+.fork-choice{padding:14px 16px; border-radius:10px; font-size:13.5px;}
+.fork-choice.a{background:var(--terracotta-tint); border:1px solid #E7BFA5;}
+.fork-choice.b{background:var(--teal-tint); border:1px solid #B7D6D5;}
+.fork-choice.c{background:var(--brass-tint); border:1px solid #DDBE82;}
+.fork-choice b{display:block; font-family:var(--font-display); font-size:14.5px; margin-bottom:4px;}
+.fork-choice.a b{color:var(--terracotta-deep);}
+.fork-choice.b b{color:var(--teal-deep);}
+.fork-choice.c b{color:var(--brass-deep);}
+
+.fork{margin:0 0 40px;}
+.fork-radio{position:absolute; opacity:0; pointer-events:none;}
+.fork-tabs{display:flex; gap:10px; margin-bottom:22px; flex-wrap:wrap;}
+.fork-tab{
+  flex:1; text-align:center; cursor:pointer; user-select:none;
+  font-family:var(--font-display); font-weight:600; font-size:16px;
+  padding:16px 18px; border-radius:12px; border:1.5px solid var(--line);
+  background:var(--white); color:var(--charcoal-soft);
+  transition:all .18s; position:relative;
+}
+.fork-tab .sub{display:block; font-family:var(--font-mono); font-weight:400; font-size:11px; letter-spacing:.04em; margin-top:5px; opacity:.75;}
+#opt-a:checked ~ .fork-tabs .fork-tab--a{
+  background:var(--terracotta); border-color:var(--terracotta); color:#fff;
+}
+#opt-b:checked ~ .fork-tabs .fork-tab--b{
+  background:var(--teal); border-color:var(--teal); color:#fff;
+}
+#opt-c:checked ~ .fork-tabs .fork-tab--c{
+  background:var(--brass); border-color:var(--brass); color:#fff;
+}
+.fork-panel{display:none;}
+#opt-a:checked ~ .fork-panel--a{display:block;}
+#opt-b:checked ~ .fork-panel--b{display:block;}
+#opt-c:checked ~ .fork-panel--c{display:block;}
+.fork-panel .panel-label{
+  font-family:var(--font-mono); font-size:11.5px; letter-spacing:.08em; text-transform:uppercase;
+  margin-bottom:18px; display:inline-block; padding:5px 12px; border-radius:20px;
+}
+.fork-panel--a .panel-label{background:var(--terracotta-tint); color:var(--terracotta-deep);}
+.fork-panel--b .panel-label{background:var(--teal-tint); color:var(--teal-deep);}
+.fork-panel--c .panel-label{background:var(--brass-tint); color:var(--brass-deep);}
+.fork-panel--a .entry__time::after{border-color:var(--terracotta);}
+.fork-panel--b .entry__time::after{border-color:var(--teal);}
+.fork-panel--c .entry__time::after{border-color:var(--brass);}
+
+@media print{
+  .fork-tabs{display:none;}
+  .fork-radio{display:none;}
+  .fork-panel{display:block !important; margin-bottom:30px;}
+  .fork-panel::before{
+    content:"Option A \00B7 Coastal Drive to Ragged Point"; display:block; font-family:var(--font-display);
+    font-weight:600; font-size:18px; margin-bottom:14px; color:var(--terracotta-deep);
+  }
+  .fork-panel--b::before{content:"Option B \00B7 Big Sur"; color:var(--teal-deep);}
+  .fork-panel--c::before{content:"Option C \00B7 Relaxed Coastal & Downtown Afternoon"; color:var(--brass-deep);}
+}
+
+/* ============================================================
+   KNOW BEFORE YOU GO / CARDS
+   ============================================================ */
+.card-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin:24px 0;}
+@media (max-width:640px){.card-grid{grid-template-columns:1fr;}}
+.info-card{
+  background:var(--white); border:1px solid var(--line); border-radius:var(--radius);
+  padding:20px 22px; box-shadow:var(--shadow-sm);
+}
+.info-card h4{font-size:16.5px; margin-bottom:10px; display:flex; align-items:center; gap:8px;}
+.info-card .tag{font-family:var(--font-mono); font-size:10.5px; color:var(--brass-deep); letter-spacing:.06em;}
+.info-card dl{margin:10px 0 0;}
+.info-card dt{font-family:var(--font-mono); font-size:11px; letter-spacing:.05em; color:var(--charcoal-soft); text-transform:uppercase; margin-top:10px;}
+.info-card dd{margin:3px 0 0; font-size:14px;}
+
+.weather-strip{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line);
+  border-radius:var(--radius); overflow:hidden; margin:20px 0; border:1px solid var(--line);
+}
+.weather-cell{background:var(--white); padding:18px 14px; text-align:center;}
+.weather-cell .num{font-family:var(--font-display); font-size:26px; font-weight:600; color:var(--ink); display:block;}
+.weather-cell .lbl{font-family:var(--font-mono); font-size:10.5px; color:var(--charcoal-soft); text-transform:uppercase; letter-spacing:.04em; margin-top:4px; display:block;}
+@media (max-width:600px){.weather-strip{grid-template-columns:repeat(2,1fr);}}
+
+table.drive-table{width:100%; border-collapse:collapse; margin:20px 0; font-size:13.5px;}
+table.drive-table th{
+  text-align:left; font-family:var(--font-mono); font-size:11px; letter-spacing:.05em; color:var(--charcoal-soft);
+  text-transform:uppercase; padding:8px 12px; border-bottom:2px solid var(--ink);
+}
+table.drive-table td{padding:11px 12px; border-bottom:1px solid var(--line);}
+table.drive-table td.route{font-family:var(--font-display); font-weight:600; color:var(--ink);}
+table.drive-table td.mono{font-family:var(--font-mono); font-size:12.5px; color:var(--ink-soft);}
+
+.mobility-legend{display:flex; flex-wrap:wrap; gap:12px; margin:20px 0;}
+.mobility-legend .badge{font-size:12px; padding:6px 13px;}
+
+details.alt-item{
+  background:var(--white); border:1px solid var(--line); border-radius:10px;
+  padding:14px 18px; margin-bottom:10px;
+}
+details.alt-item summary{
+  font-family:var(--font-display); font-weight:600; font-size:15.5px; cursor:pointer; color:var(--ink);
+  list-style:none; display:flex; align-items:center; justify-content:space-between;
+}
+details.alt-item summary::-webkit-details-marker{display:none;}
+details.alt-item summary::after{content:"+"; font-family:var(--font-mono); font-size:18px; color:var(--brass-deep);}
+details.alt-item[open] summary::after{content:"\2212";}
+details.alt-item p{margin-top:10px; font-size:14px; color:var(--charcoal-soft);}
+
+.etiquette-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin:20px 0;}
+@media (max-width:640px){.etiquette-grid{grid-template-columns:1fr;}}
+.etiquette-item{padding:16px 18px; background:var(--paper-alt); border-radius:10px; border-left:3px solid var(--brass);}
+.etiquette-item .et-label{font-family:var(--font-mono); font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:var(--brass-deep); display:block; margin-bottom:5px;}
+.etiquette-item p{font-size:13.5px; margin:0; color:var(--ink-soft);}
+
+.budget-table{width:100%; border-collapse:collapse; margin:20px 0; font-size:14px;}
+.budget-table th{text-align:left; font-family:var(--font-mono); font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:var(--charcoal-soft); padding:8px 12px; border-bottom:2px solid var(--ink);}
+.budget-table td{padding:12px; border-bottom:1px solid var(--line); vertical-align:top;}
+.budget-table td.day-name{font-family:var(--font-display); font-weight:600; color:var(--ink); white-space:nowrap;}
+.budget-table td.amt{font-family:var(--font-mono); color:var(--brass-deep); font-weight:600; white-space:nowrap;}
+
+/* ============================================================
+   SOURCES
+   ============================================================ */
+.sources-grid{display:grid; grid-template-columns:1fr 1fr; gap:30px; margin-top:20px;}
+@media (max-width:640px){.sources-grid{grid-template-columns:1fr;}}
+.source-cat h4{font-size:14px; font-family:var(--font-mono); letter-spacing:.05em; text-transform:uppercase; color:var(--brass-deep); border-bottom:1px solid var(--line); padding-bottom:8px; margin-bottom:10px;}
+.source-cat ul{list-style:none; margin:0; padding:0;}
+.source-cat li{font-size:13px; margin-bottom:9px; line-height:1.4;}
+.source-cat li a{color:var(--ink-soft);}
+
+footer{padding:46px 0 60px; text-align:center;}
+footer .eyebrow{display:block; margin-bottom:8px;}
+footer p{font-family:var(--font-display); font-style:italic; font-size:15px; color:var(--charcoal-soft); max-width:420px; margin:0 auto;}
+footer .fine{font-family:var(--font-mono); font-size:11px; color:var(--charcoal-soft); margin-top:18px;}
+
+hr.rule{border:none; border-top:1px solid var(--line); margin:50px 0 0;}
+
+/* reveal animation */
+.reveal{opacity:0; transform:translateY(14px); transition:opacity .55s ease, transform .55s ease;}
+.reveal.show{opacity:1; transform:translateY(0);}
+
+/* print */
+@media print{
+  .nav-wrap{display:none;}
+  body{background:#fff;}
+  .hero-route{display:none;}
+  section.day{padding-top:30px; page-break-inside:avoid;}
+  .entry{page-break-inside:avoid;}
+  .confirmed-strip{background:#fff !important;}
+  .confirmed-card{background:#fff !important; color:#1B2A41 !important; border:1px solid #ccc;}
+  .confirmed-card .ck-title, .confirmed-card .ck-sub, .confirmed-card .ck-day{color:#1B2A41 !important;}
+  .concierge-note{background:#fff !important; color:#1B2A41 !important; border:1px solid #ccc;}
+  .concierge-note p, .concierge-note li, .concierge-note h4, .concierge-note b{color:#1B2A41 !important;}
+  a{color:#1B2A41 !important;}
+  .reveal{opacity:1 !important; transform:none !important;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav-wrap">
+  <div class="nav-inner">
+    <span class="nav-brand">SLO &middot; Guide</span>
+    <a class="nav-link" href="#overview">Overview</a>
+    <a class="nav-link" href="#thursday">Thu</a>
+    <a class="nav-link" href="#friday">Fri</a>
+    <a class="nav-link" href="#saturday">Sat</a>
+    <a class="nav-link" href="#sunday">Sun</a>
+    <a class="nav-link" href="#know-before">Know Before</a>
+    <a class="nav-link" href="#sources">Sources</a>
+    <button class="nav-print" onclick="window.print()">Print Guide</button>
+    <button class="nav-theme" id="theme-toggle" title="Toggle dark mode">&#9790;</button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-route" aria-hidden="true">
+    <svg viewBox="0 0 280 220" fill="none">
+      <path d="M250 10 C 230 40, 220 70, 195 95 C 165 125, 150 130, 130 150 C 105 175, 95 175, 70 185 C 50 192, 35 200, 20 210" stroke="#0E5C63" stroke-width="2" stroke-dasharray="1 7" stroke-linecap="round"/>
+      <path d="M195 95 C 215 90, 235 95, 245 115 C 255 138, 245 155, 220 160 C 200 164, 185 155, 180 138" stroke="#B5572A" stroke-width="2" stroke-dasharray="1 7" stroke-linecap="round"/>
+      <circle cx="250" cy="10" r="4" fill="#0E5C63"/>
+      <circle cx="195" cy="95" r="4" fill="#A8762E"/>
+      <circle cx="220" cy="160" r="4" fill="#B5572A"/>
+      <circle cx="20" cy="210" r="4" fill="#0E5C63"/>
+    </svg>
+  </div>
+  <div class="container">
+    <span class="eyebrow">Weekend Field Guide &middot; Central California Coast</span>
+    <h1>San Luis Obispo, CA<br>Family Vacation</h1>
+    <p class="dek">Four days, three nights, two architectural icons! And other fun things to check out in addition to the confirmed bookings. Three (!!!) different Saturday options mapped out so we can decide the morning of.</p>
+    <div class="hero-meta" style="grid-template-columns:repeat(2,1fr); max-width:360px;">
+      <div><span class="eyebrow">Dates</span><strong>Thu&ndash;Sun, Jun 25&ndash;28</strong></div>
+      <div style="border-right:none;"><span class="eyebrow">Region</span><strong>SLO &middot; San Simeon &middot; Big Sur</strong></div>
+    </div>
+  </div>
+</header>
+
+<section class="confirmed-strip">
+  <div class="container">
+    <div class="confirmed-grid">
+      <div class="confirmed-card">
+        <span class="ck-day">Thu &amp; Fri Nights</span>
+        <div class="ck-title">Madonna Inn</div>
+        <div class="ck-sub">100 Madonna Rd, SLO</div>
+        <span class="ck-badge">&#10003; Confirmed</span>
+      </div>
+      <div class="confirmed-card">
+        <span class="ck-day">Friday &middot; 1:20 PM</span>
+        <div class="ck-title">Julia Morgan Tour</div>
+        <div class="ck-sub">Hearst Castle, San Simeon</div>
+        <span class="ck-badge">&#10003; Confirmed</span>
+      </div>
+      <div class="confirmed-card">
+        <span class="ck-day">Friday &middot; 6:30 PM</span>
+        <div class="ck-title">Gold Rush Steak House</div>
+        <div class="ck-sub">Madonna Inn Dining Room</div>
+        <span class="ck-badge">&#10003; Confirmed</span>
+      </div>
+      <div class="confirmed-card">
+        <span class="ck-day">Saturday Night</span>
+        <div class="ck-title">Hampton Inn &amp; Suites</div>
+        <div class="ck-sub">1530 Calle Joaquin, SLO</div>
+        <span class="ck-badge">&#10003; Confirmed</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="day" id="overview">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="num">01 &middot; Planning Reference</span>
+      <h2>Trip Overview &amp; Logistics</h2>
+      <p class="tagline">What to expect weather-wise and while on the road.</p>
+    </div>
+
+    <h4 style="margin-top:30px;">The 4-day forecast</h4>
+    <div class="day-weather-grid reveal">
+      <div class="day-weather-card">
+        <div class="dw-day">Thu 6/25 &middot; SLO coast</div>
+        <div class="dw-temps">73&deg;F <span class="lo">Lo 53&deg;</span></div>
+        <div class="dw-cond">Mix of sun and clouds</div>
+        <div class="dw-note">Marine layer clears ~10 AM &middot; W winds 12 mph &middot; No rain</div>
+      </div>
+      <div class="day-weather-card">
+        <div class="dw-day">Fri 6/26 &middot; San Simeon</div>
+        <div class="dw-temps">71&deg;F <span class="lo">Lo 54&deg;</span></div>
+        <div class="dw-cond">Morning clouds, afternoon sun</div>
+        <div class="dw-note">Hearst hilltop runs 15&ndash;20&deg; warmer &middot; WNW 15 mph &middot; No rain</div>
+      </div>
+      <div class="day-weather-card">
+        <div class="dw-day">Sat 6/27 &middot; SLO / Big Sur</div>
+        <div class="dw-temps">71&deg;F <span class="lo">Lo 51&deg;</span></div>
+        <div class="dw-cond">Clouds giving way to sun</div>
+        <div class="dw-note">Big Sur coast ~65&deg;F &middot; WNW 18 mph &middot; No rain</div>
+      </div>
+      <div class="day-weather-card">
+        <div class="dw-day">Sun 6/28 &middot; SLO</div>
+        <div class="dw-temps">73&deg;F <span class="lo">Lo 48&deg;</span></div>
+        <div class="dw-cond">Mainly sunny</div>
+        <div class="dw-note">Best beach weather of the trip &middot; NW 15 mph &middot; No rain</div>
+      </div>
+    </div>
+    <p style="font-size:12.5px; color:var(--charcoal-soft);">Forecast pulled June 25, 2026. No wave warnings in effect for these dates. Marine layer is typical for June; plan coastal starts for mid-morning when possible.</p>
+
+    <h4 style="margin-top:34px;">Driving reference</h4>
+    <table class="drive-table reveal">
+      <tr><th>Route</th><th>Time</th><th>Distance</th><th>Notes</th></tr>
+      <tr><td class="route">Bay Area &rarr; Madonna Inn</td><td class="mono">~3.5&ndash;4 hrs</td><td class="mono">~230 mi</td><td>I-880 S to US-101 S, stay on 101 the whole way</td></tr>
+      <tr><td class="route">SLO &rarr; Hearst Castle</td><td class="mono">~55 min</td><td class="mono">~45 mi</td><td>US-101 N, then Hwy 1 N</td></tr>
+      <tr><td class="route">SLO &rarr; Morro Bay</td><td class="mono">~20 min</td><td class="mono">~15 mi</td><td>Hwy 1 N or Los Osos Valley Rd</td></tr>
+      <tr><td class="route">SLO &rarr; Avila Beach</td><td class="mono">~15 min</td><td class="mono">~10 mi</td><td>US-101 S</td></tr>
+      <tr><td class="route">Morro Bay &rarr; Ragged Point</td><td class="mono">~1 hr 15 min</td><td class="mono">~55 mi</td><td>Hwy 1 N the whole way</td></tr>
+      <tr><td class="route">SLO &rarr; Limekiln State Park</td><td class="mono">~2 hrs</td><td class="mono">~85 mi</td><td>US-101 S to Morro Bay, then Hwy 1 N all the way</td></tr>
+      <tr><td class="route">SLO &rarr; Nepenthe / Henry Miller</td><td class="mono">~2.5 hrs</td><td class="mono">~100 mi</td><td>Same Hwy 1 N route, continue past Limekiln</td></tr>
+      <tr><td class="route">SLO &rarr; Hurricane Point (Big Sur)</td><td class="mono">~3.5 hrs</td><td class="mono">~130 mi</td><td>Hwy 1 N all the way; most iconic northern Big Sur viewpoint</td></tr>
+    </table>
+
+    <div class="mobility-legend reveal">
+      <span class="badge badge--confirmed">&#10003; Already booked</span>
+      <span class="badge badge--optional">Optional add-on</span>
+    </div>
+  </div>
+</section>
+
+<section class="day" id="thursday">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="num">02 &middot; Thursday, June 25</span>
+      <h2>Arrival &amp; Settling In</h2>
+      <p class="tagline">No itinerary. No rush. Just dinner.</p>
+
+    </div>
+    <p class="day-intro reveal">Travel day for everyone. Aiming for late afternoon arrival at Madonna Inn.</p>
+
+    <div class="timeline">
+      <div class="entry reveal">
+        <div class="entry__time"><span class="entry__clock">Midday</span><span class="entry__sub">Arrivals TBD</span></div>
+        <div class="entry__content">
+          <div class="entry__title">Travel day</div>
+          <p>No set arrival times or confirmed dinner plans. C&amp;J will hit the road once work wraps up. B&amp;D arrive mid-afternoon.</p>
+        </div>
+      </div>
+
+      <div class="entry reveal">
+        <div class="entry__time"><span class="entry__clock">~4:00 PM</span><span class="entry__sub">B&D check in</span></div>
+        <div class="entry__content">
+          <div class="entry__title">Check in at Madonna Inn <span class="badge badge--confirmed">&#10003; Confirmed</span></div>
+          <p>An absolute icon. All 110 rooms are individually themed, and the walk from the lobby to your room (Misty Rock) is just a preview of what's to come. There's a rock-wall fireplace, a cascading gold staircase, and a lot of pink.</p>
+          <span class="addr">100 Madonna Rd, San Luis Obispo, CA 93405 &middot; (805) 543-3000</span>
+          <a class="gallery-link" href="https://www.madonnainn.com/" target="_blank" rel="noopener">View rooms &amp; property gallery</a>
+        </div>
+      </div>
+
+      <div class="entry reveal">
+        <div class="entry__time"><span class="entry__clock">~4:30&ndash;6:00 PM</span><span class="entry__sub">Explore the hotel</span></div>
+        <div class="entry__content">
+          <div class="entry__title">Settle in &amp; wander the grounds <span class="badge badge--optional">Optional</span></div>
+          <p>B&D will likely arrive before C&J. You should wander around the hotel buildings/grounds and check out the décor. The famous rock waterfall fountain in the men's room, is worth a peek. (Yes, ladies can pop in to see it too. It's not weird.) There are walking paths around the property, like the Lemon Grove Loop.</p>
+        </div>
+      </div>
+
+      <div class="entry reveal">
+        <div class="entry__time"><span class="entry__clock">6:00&ndash;8:30 PM</span><span class="entry__sub">Three options</span></div>
+        <div class="entry__content">
+          <div class="entry__title">Dinner: Farmers' Market, Giuseppe's, or Copper Cafe</div>
+          <p>Downtown SLO's Thursday Night Farmers' Market runs 6 to 9 PM on Higuera Street: 5 blocks of produce stalls, wood-fired barbecue, live music, street performers. Slice of local life, and one of the best farmers' markets in CA.</p>
+          <p>If we're up for a good sit-down dinner, Giuseppe's Cucina Rustica is open until 9 PM on Thursdays. It's one of our fave Italian restaurants. They don't take reservations, but hopefully won't be busy if everyone goes to the FM stalls instead.</p>
+          <p>If we miss the window for the Market or we're all too tired to drive into SLO, the Copper Cafe inside Madonna Inn is a good backup: classic diner food, served all day.</p>
+          <span class="addr">Higuera St (Farmers' Market) &middot; 849 Monterey St (Giuseppe's) &middot; 100 Madonna Rd (Copper Cafe)</span>
+          <a class="gallery-link" href="https://downtownslo.com/farmers-market/" target="_blank" rel="noopener">Farmers' Market details &amp; map</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="trivia-card reveal">
+      <span class="eyebrow">Did You Know?</span>
+      <h4>Thursday Trivia</h4>
+      <ul>
+        <li>The Madonna Inn opened on Christmas Eve 1958 with just 12 rooms. The Madonnas were so excited to have their first guests they refunded the $7 room charge. Alex Madonna personally built many of the California highways he would later drive to reach his own hotel.</li>
+        <li>SLO's Thursday Night Farmers' Market has run continuously since 1983, making it one of the longest-running weekly street markets in California. It launched as a farmers-only event and eventually grew to include the food vendors and live music it's known for today.</li>
+        <li>San Luis Obispo was founded around Mission San Luis Obispo de Tolosa in 1772, making it one of California's oldest European settlements. The mission is credited with perfecting and popularizing clay roof tiles across California's missions. An earlier mission likely made the first ones, but San Luis Obispo produced them at scale and spread the design after a series of tule-grass roofs were set on fire by arrows during conflicts with local tribes.</li>
+        <li>SLO's Bubblegum Alley, a 70-foot alleyway covered in chewed gum, started sometime in the 1950s or 1960s. The origin story is contested but most credit a Cal Poly rivalry tradition. It's been cleaned twice and the gum always comes back.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="day" id="friday">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="num">03 &middot; Friday, June 26</span>
+      <h2>Hearst Castle Day</h2>
+      <p class="tagline">Tour confirmed at 1:20 PM. Dinner confirmed at 6:30 PM.</p>
+    </div>
+    <p class="day-intro reveal">Nothing before 9:30 AM is required. J will be on work calls until 9 AM. Breakfast can be onsite or on the road. The only hard anchor today is the 1:20 PM tour.</p>
+
+    <div class="timeline">
+      <div class="entry reveal">
+        <div class="entry__time"><span class="entry__clock">Before 9:30 AM</span><span class="entry__sub">Optional</span></div>
+        <div class="entry__content">
+          <div class="entry__title">Breakfast at the Copper Cafe <span class="badge badge--optional">Optional</span></div>
+          <p>The Copper Cafe serves diner food all day if anyone wants a heartier breakfast before the Hearst Castle tour. Otherwise, if the people want to sleep in, we can grab something on the way.</p>
+        </div>
+      </div>
+
+      <div class="entry reveal">
+        <div class="entry__time"><span class="entry__clock">~9:30 AM</span><span class="entry__sub">~55 min drive</span></div>
+        <div class="entry__content">
+          <div class="entry__title">Drive north on scenic Highway 1</div>
+          <p>Head north on US-101 briefly, then pick up Hwy 1 through Morro Bay and Cayucos. The marine layer usually hangs over this coast through mid-morning: softer light, cooler air, easier driving. It clears by late morning, right when we want clear views at the seals and the hilltop.</p>
+        </div>
+      </div>
+
+      <div class="entry reveal">
+        <div class="entry__time"><span class="entry__clock">~10:30 AM</span><span class="entry__sub">~30 min stop</span></div>
+        <div class="entry__content">
+          <div class="entry__title">Cambria village stroll <span class="badge badge--optional">Optional</span></div>
+          <p>A small, walkable arts village with galleries, independent shops, and a bakery case worth a detour. Good coffee stop for the road. Easy to skip if we're running behind.</p>
+        </div>
+      </div>
+
+      <div class="entry reveal">
+        <div class="entry__time"><span class="entry__clock">~11:15 AM</span><span class="entry__sub">~45 min</span></div>
+        <div class="entry__content">
+          <div class="entry__title">Piedras Blancas elephant seal vista point</div>
+          <p>Free, open year round, with a paved and railed boardwalk right above the beach. This stop is on the route whether we go today or on Saturday's Option A or B drive north.</p>
+          <p>Late June brings adult and subadult males arriving to molt, a process that runs into August. Fewer animals than peak season (late January/late April), but they're still enormous. Docents in blue jackets are usually around to answer questions.</p>
+          <span class="addr">Hwy 1, San Simeon, CA 93452 (look for "Elephant Seal Vista Point" on any map app)</span>
+          <a class="gallery-link" href="https://elephantseal.org/plan-your-visit/" target="_blank" rel="noopener">Visiting info &amp; live updates</a>
+        </div>
+      </div>
+
+      <div class="entry reveal">
+        <div class="entry__time"><span class="entry__clock">~12:20 PM</span><span class="entry__sub">Visitor Center</span></div>
+        <div class="entry__content">
+          <div class="entry__title">Arrive Hearst Castle Visitor Center</div>
+          <p>Should try to arrive an hour ahead of the tour start, so we have time to find parking, use the restrooms, grab a snack if anyone needs one, and board the shuttle. The bus ride up, narrated by the late Alex Trebek, is a 5-mile climb.</p>
+        </div>
+      </div>
+
+      <div class="entry reveal">
+        <div class="entry__time"><span class="entry__clock">1:20&ndash;3:20 PM</span><span class="entry__sub">2 hrs &middot; 4 guests</span></div>
+        <div class="entry__content">
+          <div class="entry__title">Julia Morgan Tour <span class="badge badge--confirmed">&#10003; Confirmed</span></div>
+          <p>A deep look at rarely seen areas of the castle, built around architect Julia Morgan's design work. The tour also showcases photographic displays highlighting her genius for design, family photos and personal items.</p>
+          <p>Good to know: 2 hrs long, limited to 8 guests per tour, involves climbing 750+ stairs.</p>
+          <span class="addr">750 Hearst Castle Rd, San Simeon, CA 93452 &middot; (805) 927-2020</span>
+          <a class="gallery-link" href="https://hearstcastle.org/tour-hearst-castle/daily-tours/julia-morgan-tour/" target="_blank" rel="noopener">Official tour page &amp; photos</a>
+        </div>
+      </div>
+
+      <div class="smart-tip reveal">
+        <span class="eyebrow">Smart Tip</span>
+        <h4>Hilltop heat is a different animal than coastal heat</h4>
+        <ul>
+          <li>The hilltop sits inland of the marine layer and can run 20 degrees or more hotter than the coast. In late June, that's easily 90&deg;F up there, even on a mild coastal day.</li>
+          <li>Wear sunscreen and bring water. There's not a lot of shade on the upper terraces.</li>
+        </ul>
+      </div>
+
+      <div class="entry reveal" style="margin-top:30px;">
+        <div class="entry__time"><span class="entry__clock">~3:45 PM</span><span class="entry__sub">~30 min</span></div>
+        <div class="entry__content">
+          <div class="entry__title">Hearst Ranch Winery, San Simeon <span class="badge badge--optional">Optional</span></div>
+          <p>An easy detour on the way back through Old San Simeon Village if people still want to visit a winery. They have an oceanfront tasting room across from the historic Sebastian's General Store, with a food truck on site if anyone needs a snack before dinner. Reservations recommended; walk-ins not guaranteed.</p>
+          <span class="addr">442 SLO San Simeon Rd, San Simeon, CA 93452</span>
+        </div>
+      </div>
+
+      <div class="entry reveal">
+        <div class="entry__time"><span class="entry__clock">6:30 PM</span><span class="entry__sub">Madonna Inn</span></div>
+        <div class="entry__content">
+          <div class="entry__title">Dinner at Gold Rush Steak House <span class="badge badge--confirmed">&#10003; Confirmed</span></div>
+          <p>Alex Madonna's Gold Rush Steak House, is their famous pink-hued, whimsical dining room. Menu is standard American fare, including surf & turf, famous pink champagne cake, and live music. A fun way to close out last night at Madonna Inn.</p>
+          <span class="addr">100 Madonna Rd, San Luis Obispo, CA 93405 &middot; (805) 543-3000</span>
+          <a class="gallery-link" href="https://www.madonnainn.com/goldrush-steakhouse" target="_blank" rel="noopener">Menu &amp; photos</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="trivia-card reveal">
+      <span class="eyebrow">Did You Know?</span>
+      <h4>Friday Trivia</h4>
+      <ul>
+        <li>Hearst Castle took 28 years to build and was never finished. Construction ran from 1919 to 1947, and William Randolph Hearst died in 1951 with parts of the project still incomplete. At its peak, the estate housed one of the world's largest private art collections.</li>
+        <li>Julia Morgan was the first woman licensed as an architect in California, and she designed over 700 buildings in her career. Hearst was her largest project by far. She visited the construction site in San Simeon almost every weekend for nearly three decades.</li>
+        <li>The elephant seal colony at Piedras Blancas didn't exist until 1990. Before that, the entire Central California coast had no breeding elephant seals. They were hunted to near extinction in the 1800s and slowly repopulated south from Año Nuevo. Today over 17,000 seals use the beach each year.</li>
+        <li>Cambria was settled in the 1860s as a hub for the mercury-mining and dairy industries. The remains of the old Leffingwell Landing pier are still visible just north of Moonstone Beach, a leftover from the era when this stretch of coast relied on small schooners for supplies before the railroad arrived.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="day" id="saturday">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="num">04 &middot; Saturday, June 27</span>
+      <h2>Open Day, Three Ways</h2>
+      <p class="tagline">Wide open day = flexible afternoon with 3 options to choose from.</p>
+
+    </div>
+    <p class="day-intro reveal">Checkout from Madonna Inn is noon and check-in at the Hampton isn't until 3 PM. A later dinner at Giuseppe's is a loose target for the evening, but we can decide how we feel while on the road and go from there!</p>
+
+    <h4 style="margin-top:6px;">The shared morning</h4>
+    <div class="timeline">
+      <div class="entry reveal">
+        <div class="entry__time"><span class="entry__clock">8:00 AM</span><span class="entry__sub">Express checkout</span></div>
+        <div class="entry__content">
+          <div class="entry__title">Breakfast &amp; checkout at Madonna Inn</div>
+          <p>If we didn't get breakfast at the Copper Cafe yesterday, we can eat here in the morning before we leave.</p>
+        </div>
+      </div>
+
+      <div class="entry reveal">
+        <div class="entry__time"><span class="entry__clock">~9:00 AM</span><span class="entry__sub">En route</span></div>
+        <div class="entry__content">
+          <div class="entry__title">Drop bags at Hampton Inn &amp; Suites</div>
+          <p>We can either drop luggage at the front desk to hold until we can check in or we bring them with us (only if we don't think we'd be leaving the car unattended for a long stretch of time).</p>
+          <span class="addr">1530 Calle Joaquin, San Luis Obispo, CA 93405 &middot; (805) 594-1445</span>
+        </div>
+      </div>
+
+      <div class="entry reveal">
+        <div class="entry__time"><span class="entry__clock">9:30&ndash;10:30 AM</span><span class="entry__sub">~20 min drive</span></div>
+        <div class="entry__content">
+          <div class="entry__title">Sea otters at the Morro Bay Embarcadero</div>
+          <p>Morning really is the best window for this. Otters are most active before 10 AM, often floating and feeding in the kelp beds right off the South T-Pier. Sightings aren't guaranteed, but the odds are good at this hour. Either way, the Embarcadero is an easy wander, with Morro Rock looming over the whole scene.</p>
+          <span class="addr">South T-Pier, 1185 Embarcadero, Morro Bay, CA 93442</span>
+          <a class="gallery-link" href="https://www.morrobay.org/blog/morro-bay-sealebrities/" target="_blank" rel="noopener">Otter viewing spots &amp; tips</a>
+        </div>
+      </div>
+
+      <div class="entry reveal">
+        <div class="entry__time"><span class="entry__clock">~10:15 AM</span><span class="entry__sub">5 min</span></div>
+        <div class="entry__content">
+          <div class="entry__title">Snack stop at Giovanni's Fish Market <span class="badge badge--optional">Optional</span></div>
+          <p>Right on the Embarcadero. A cup of clam chowder + otter-watching is 5 stars. One of J's fave places to stop. They also have decent fish and chips.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fork-intro reveal">
+      <h4>Decide after the otters</h4>
+      <p> Three different options depending on how we're feeling energy-wise. Both Big Sur options have nice views, but B will have C&J's favorites. Option C is just in case we need to stay local. A back up, back up option!</p>
+      <div class="fork-choice-grid">
+        <div class="fork-choice a"><b>Option A &middot; Ragged Point</b>About 3 hours of driving total. We'll reach the southern edge of Big Sur, grab lunch on the cliff, and get back to SLO by 4-5 PM for an early dinner at Giuseppe's.</div>
+        <div class="fork-choice b"><b>Option B &middot; Best of Big Sur</b>A full day on the road, around 5 hours of driving. Limekiln SP, McWay Falls, Nepenthe, Henry Miller Library, Pfeiffer Beach. Nepenthe has lunch and amazing views. We'd be back in time for a 7:30ish dinner at Giuseppe's.</div>
+        <div class="fork-choice c"><b>Option C &middot; Downtown SLO</b>The back up to the back up plan. If we're too tired to go far and prefer to stick close to our hotel, we can explore SLO! Wander Higuera Street, eat lunch at Firestone Grill, check out the local shops, etc.</div>
+      </div>
+    </div>
+
+    <div class="fork">
+      <input type="radio" name="sat-fork" id="opt-a" class="fork-radio" checked>
+      <input type="radio" name="sat-fork" id="opt-b" class="fork-radio">
+      <input type="radio" name="sat-fork" id="opt-c" class="fork-radio">
+      <div class="fork-tabs">
+        <label for="opt-a" class="fork-tab fork-tab--a">Option A<span class="sub">Ragged Point</span></label>
+        <label for="opt-b" class="fork-tab fork-tab--b">Option B<span class="sub">Best of Big Sur</span></label>
+        <label for="opt-c" class="fork-tab fork-tab--c">Option C<span class="sub">Downtown SLO</span></label>
+      </div>
+
+      <div class="fork-panel fork-panel--a">
+        <span class="panel-label">Option A &middot; Coastal Drive to Ragged Point</span>
+        <div class="timeline">
+          <div class="entry reveal">
+            <div class="entry__time"><span class="entry__clock">~10:45 AM</span><span class="entry__sub">~1 hr 15 min</span></div>
+            <div class="entry__content">
+              <div class="entry__title">Drive north on Highway 1 to Ragged Point</div>
+              <p>Stay on Hwy 1 north out of Morro Bay. The stretch through Cayucos and Cambria is familiar from Friday, but north of Hearst Castle the road gets serious: the Santa Lucia Mountains drop straight into the Pacific, with turnouts every few miles that are all worth using.</p>
+              <p>Ragged Point is 15 miles north of Hearst Castle. That's the destination.</p>
+            </div>
+          </div>
+
+          <div class="entry reveal">
+            <div class="entry__time"><span class="entry__clock">~12:00&ndash;1:15 PM</span><span class="entry__sub">Gateway to Big Sur</span></div>
+            <div class="entry__content">
+              <div class="entry__title">Ragged Point <span class="badge badge--optional">Optional add-on</span></div>
+              <p>Ragged Point Inn sits 350 feet above the Pacific on the southern edge of Big Sur. This is where the trip's coastline officially becomes Big Sur territory. Property is known for its views. Restaurant opens for lunch at noon.</p>
+              <p>The restaurant has floor-to-ceiling glass facing the ocean and a heated outdoor patio. The food is solid; the view is STUNNING. Reservations not required, but recommended. It may be busy now that Hwy 1 has fully reopened after a 3-year closure.</p>
+              <span class="addr">19019 Hwy 1, Ragged Point, CA 93452 &middot; (805) 927-5708</span>
+              <a class="gallery-link" href="https://www.raggedpointinn.com/restaurant" target="_blank" rel="noopener">Restaurant info &amp; reservations</a>
+            </div>
+          </div>
+
+          <div class="smart-tip reveal" style="margin:30px 0 8px;">
+            <span class="eyebrow">Smart Tip</span>
+            <h4>Call ahead for a table</h4>
+            <ul>
+              <li>Hwy 1 fully reopened in January 2026 after 3 years of closures. Traffic on this stretch is heavier than it's been in years. Weekend lunch at Ragged Point fills up.</li>
+              <li>Call (805) 927-5708 before the trip to reserve a noon table. It takes 2 minutes and removes the only real variable of the afternoon.</li>
+              <li>Don't linger past 2:00 PM. The return drive to SLO is about 1.5 hours, something to keep in mind if people want to nap and freshen up before dinner.</li>
+            </ul>
+          </div>
+
+          <div class="entry reveal" style="margin-top:30px;">
+            <div class="entry__time"><span class="entry__clock">~1:15 PM</span><span class="entry__sub">~1.5 hrs south</span></div>
+            <div class="entry__content">
+              <div class="entry__title">Drive back to San Luis Obispo</div>
+              <p>Head south on Hwy 1 through San Simeon and Cambria, then pick up US-101 S from Morro Bay for the final stretch into SLO. The return trip on the same road looks completely different going southbound.</p>
+            </div>
+          </div>
+
+          <div class="entry reveal">
+            <div class="entry__time"><span class="entry__clock">~3:00 PM</span><span class="entry__sub">~10 min drive</span></div>
+            <div class="entry__content">
+              <div class="entry__title">Check in at the Hampton Inn &amp; Suites <span class="badge badge--confirmed">&#10003; Confirmed</span></div>
+              <p>Settle in and freshen up before heading to Giuseppe's.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fork-panel fork-panel--b">
+        <span class="panel-label">Option B &middot; C&J's Big Sur Faves</span>
+        <div class="timeline">
+          <div class="entry reveal">
+            <div class="entry__time"><span class="entry__clock">~10:45 AM</span><span class="entry__sub">~1 hr 15 min</span></div>
+            <div class="entry__content">
+              <div class="entry__title">Drive north through Ragged Point</div>
+              <p>Same start as Option A: Hwy 1 north from Morro Bay. Stop at Ragged Point for 15 minutes to take in the view, then keep going north to see all our favorite spots!</p>
+            </div>
+          </div>
+
+          <div class="entry reveal">
+            <div class="entry__time"><span class="entry__clock">~12:15 PM</span><span class="entry__sub">~20 min stop</span></div>
+            <div class="entry__content">
+              <div class="entry__title">Limekiln State Park <span class="badge badge--optional">Optional add-on</span></div>
+              <p>One of our favorite regular camping spots. A compact state park with old-growth redwoods, a small beach, and the rusted remains of 4 limestone kilns from the 1880s tucked into a canyon. The main loop is short, about a mile round trip. Good stop if the group wants to stretch their legs before the longer drive to Nepenthe.</p>
+              <span class="addr">63025 Hwy 1, Big Sur, CA 93920</span>
+              <a class="gallery-link" href="https://www.parks.ca.gov/?page_id=577" target="_blank" rel="noopener">Park info &amp; trail map</a>
+            </div>
+          </div>
+
+          <div class="entry reveal">
+            <div class="entry__time"><span class="entry__clock">~1:00 PM</span><span class="entry__sub">Roadside pull-off</span></div>
+            <div class="entry__content">
+              <div class="entry__title">McWay Falls &middot; Julia Pfeiffer Burns State Park</div>
+              <p>An 80-foot waterfall that drops straight onto a cove beach, one of the most photographed spots on the California coast. The park is at mile marker 35.8 on Hwy 1, about 37 miles north of Ragged Point.</p>
+              <p>The Waterfall Overlook Trail is closed through 2026 for a retaining wall repair. The falls are still visible from a small pull-off on the highway. Worth the stop even as a windshield view.</p>
+              <span class="addr">Hwy 1, mile marker 35.8, Big Sur, CA 93920 &middot; $10/car at kiosk</span>
+              <a class="gallery-link" href="https://www.parks.ca.gov/?page_id=578" target="_blank" rel="noopener">Park status &amp; current closures</a>
+            </div>
+          </div>
+
+          <div class="entry reveal">
+            <div class="entry__time"><span class="entry__clock">~1:30&ndash;3:00 PM</span><span class="entry__sub">800 ft above the Pacific</span></div>
+            <div class="entry__content">
+              <div class="entry__title">Lunch at Nepenthe <span class="badge badge--confirmed">&#10003; Confirmed plan</span></div>
+              <p>This is a really place to eat and watch the coastal fog (and condors!). Nepenthe has been perched on this cliff since 1949, 800 feet above the Pacific, and it earns its reputation purely on view and atmosphere. The food is solid American, the ambrosia burger is the move, but the reason you're here is the terrace.</p>
+              <p>No reservations taken. Arrive at 1:30 and expect a 20 to 30 minute wait on a Saturday. The Phoenix Shop and a lower cafe are both on site to wander while you wait.</p>
+              <span class="addr">48510 Hwy 1, Big Sur, CA 93920 &middot; (831) 667-2345</span>
+              <a class="gallery-link" href="https://www.nepenthebigsur.com/" target="_blank" rel="noopener">Menu &amp; info</a>
+            </div>
+          </div>
+
+          <div class="entry reveal">
+            <div class="entry__time"><span class="entry__clock">~3:00&ndash;3:30 PM</span><span class="entry__sub">0.1 miles from Nepenthe</span></div>
+            <div class="entry__content">
+              <div class="entry__title">Henry Miller Memorial Library <span class="badge badge--optional">Optional add-on</span></div>
+              <p>Literally next door to Nepenthe. A free nonprofit arts center and bookstore in the redwoods, built around the life and work of Miller, who lived in Big Sur from 1944 to 1962. It's part bookstore, part community gathering space, part open-air hangout. 20 minutes, no agenda needed.</p>
+              <span class="addr">48603 Hwy 1, Big Sur, CA 93920 &middot; Open 11 AM&ndash;5 PM daily</span>
+              <a class="gallery-link" href="https://www.henrymiller.org/" target="_blank" rel="noopener">Library site &amp; events</a>
+            </div>
+          </div>
+
+          <div class="entry reveal">
+            <div class="entry__time"><span class="entry__clock">~3:30 PM</span><span class="entry__sub">~5 min drive, narrow road</span></div>
+            <div class="entry__content">
+              <div class="entry__title">Pfeiffer Beach <span class="badge badge--optional">Optional add-on</span></div>
+              <p>Purple-tinted sand from manganese garnet deposits, dramatic sea arch, usually deserted. The turnoff is Sycamore Canyon Road, 2 miles north of Henry Miller Library: an unmarked, single-lane road that winds 2 miles down to the beach. $10 per car.</p>
+              <p>Optional here means it: the road is slow and adds 45 minutes. If the group is tired or the return drive feels long, skip it and head south.</p>
+              <span class="addr">Sycamore Canyon Rd off Hwy 1, Big Sur, CA 93920 &middot; $10/car</span>
+            </div>
+          </div>
+
+          <div class="smart-tip reveal" style="margin:30px 0 8px;">
+            <span class="eyebrow">Smart Tip</span>
+            <h4>Saturday dinner at Giuseppe's runs until 10 PM.</h4>
+            <ul>
+              <li>The drive back from Big Sur takes ~2.5 hours, plenty of time to be hungry again for dinner.</li>
+              <li>Showing up closer to 7:30 hopefully means we miss the rush. Even if the dining room is full, it's typically less of a wait during the 2nd half of evening service.</li>
+            </ul>
+          </div>
+
+          <div class="entry reveal" style="margin-top:30px;">
+            <div class="entry__time"><span class="entry__clock">~3:45&ndash;4:15 PM</span><span class="entry__sub">~2.5 hrs south</span></div>
+            <div class="entry__content">
+              <div class="entry__title">Drive back to San Luis Obispo</div>
+              <p>Hwy 1 south through San Simeon and Cambria, then US-101 S from Morro Bay into SLO. The southbound drive on this road looks completely different than the northbound morning views.</p>
+            </div>
+          </div>
+
+          <div class="entry reveal">
+            <div class="entry__time"><span class="entry__clock">~6:30&ndash;7:00 PM</span><span class="entry__sub">~10 min drive</span></div>
+            <div class="entry__content">
+              <div class="entry__title">Check in at the Hampton Inn &amp; Suites <span class="badge badge--confirmed">&#10003; Confirmed</span></div>
+              <p>Drop bags, freshen up. Giuseppe's is 10 minutes away so we'll have plenty of time.</p>
+            </div>
+          </div>
+
+          <div class="entry reveal">
+            <div class="entry__time"><span class="entry__clock">7:30 PM</span><span class="entry__sub">Walk-in</span></div>
+            <div class="entry__content">
+              <div class="entry__title">Dinner at Giuseppe's Cucina Rustica <span class="badge badge--optional">Optional add-on</span></div>
+              <p>Excellent pasta dishes. Great pizza. The best lemon sorbetto.</p>
+              <span class="addr">849 Monterey St, San Luis Obispo, CA 93401 &middot; (805) 541-9922</span>
+              <a class="gallery-link" href="https://www.giuseppesrestaurant.com/" target="_blank" rel="noopener">Menu &amp; photos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fork-panel fork-panel--c">
+        <span class="panel-label">Option C &middot; Quick Coastal &amp; Downtown Afternoon</span>
+        <div class="timeline">
+          <div class="entry reveal">
+            <div class="entry__time"><span class="entry__clock">~10:45 AM</span><span class="entry__sub">~20 min drive</span></div>
+            <div class="entry__content">
+              <div class="entry__title">Drive to downtown San Luis Obispo</div>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="entry reveal">
+            <div class="entry__time"><span class="entry__clock">11:15 AM&ndash;12:30 PM</span><span class="entry__sub">Self-paced</span></div>
+            <div class="entry__content">
+              <div class="entry__title">Downtown SLO</div>
+              <p>Mission Plaza along the creek, the quirky Bubblegum Alley a block off Higuera (gross), the small San Luis Obispo Museum of Art, shops along Higuera and Marsh Streets. Browse-as-you-go, no real plan other than "wander toward whatever looks interesting."</p>
+            </div>
+          </div>
+
+          <div class="entry reveal">
+            <div class="entry__time"><span class="entry__clock">~12:30 PM</span><span class="entry__sub">Order at the counter</span></div>
+            <div class="entry__content">
+              <div class="entry__title">Lunch at Firestone Grill</div>
+              <p>A San Luis Obispo institution since 1995, built around Santa Maria-style tri-tip sandwiches. Order at the counter, seat ourselves, no reservations, but quick turnover. A local favorite with easy familiar menu items (sandwich and fries, nothing crazy).</p>
+              <span class="addr">1001 Higuera St, San Luis Obispo, CA 93401 &middot; (805) 783-1001</span>
+              <a class="gallery-link" href="https://www.firestonegrill.com/" target="_blank" rel="noopener">Menu &amp; photos</a>
+            </div>
+          </div>
+
+          <div class="entry reveal">
+            <div class="entry__time"><span class="entry__clock">1:30&ndash;3:00 PM</span><span class="entry__sub">Open-ended</span></div>
+            <div class="entry__content">
+              <div class="entry__title">More downtown time, at whatever pace fits <span class="badge badge--optional">Optional</span></div>
+              <p>This block has no fixed plan, on purpose. Keep browsing shops, find a shaded bench in Mission Plaza, or head to the Hampton Inn a little early to see if a room's ready ahead of the official 3 PM time. No one's on the clock until Giuseppe's.</p>
+            </div>
+          </div>
+
+          <div class="entry reveal">
+            <div class="entry__time"><span class="entry__clock">3:00 PM</span><span class="entry__sub">~10 min drive</span></div>
+            <div class="entry__content">
+              <div class="entry__title">Check in at the Hampton Inn &amp; Suites <span class="badge badge--confirmed">&#10003; Confirmed</span></div>
+              <p>A quick drive from downtown. Time to unpack and get settled before dinner.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h4 style="margin-top:8px;">The evening (Options A &amp; C)</h4>
+    <p style="font-size:14px; color:var(--charcoal-soft); margin-bottom:20px;">Option B has Nepenthe as the day's main meal. Options A and C can do Giuseppe's in the evening. 4:30 PM is the easiest entry (right at opening, before the walk-in wait builds), but anywhere up to 7:30 PM works since Saturday dinner runs until 10 PM.</p>
+    <div class="timeline">
+      <div class="entry reveal">
+        <div class="entry__time"><span class="entry__clock">4:30&ndash;7:30 PM</span><span class="entry__sub">Walk-in, no reservation</span></div>
+        <div class="entry__content">
+          <div class="entry__title">Dinner at Giuseppe's Cucina Rustica <span class="badge badge--optional">Optional add-on</span></div>
+          <p>A downtown San Luis Obispo institution since 1988: Pugliese-region Italian cooking, house-baked wood-fired bread, fresh pasta, all from a working farm-to-table kitchen. No reservations for a party of 4. Arriving at 4:30 (right at opening) means zero wait. Arriving at 7:30 is still well within the Saturday 10 PM close.</p>
+          <span class="addr">849 Monterey St, San Luis Obispo, CA 93401 &middot; (805) 541-9922</span>
+          <a class="gallery-link" href="https://www.giuseppesrestaurant.com/" target="_blank" rel="noopener">Menu &amp; photos</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="trivia-card reveal">
+      <span class="eyebrow">Did You Know?</span>
+      <h4>Saturday Trivia</h4>
+      <ul>
+        <li>Nepenthe's property was purchased by Orson Welles and Rita Hayworth on a whim during a road trip, after they stopped to picnic and discovered a cabin with an extraordinary view. They planned to use it as a getaway, measured the windows for curtains, and were divorced in 1947 before they ever came back. Bill and Lolly Fassett bought it from them that same year and opened the restaurant in 1949; the Fassett family still runs it today.</li>
+        <li>Henry Miller lived in Big Sur from 1944 to 1962 and wrote extensively about the area's power over him. His 1957 book Big Sur and the Oranges of Hieronymus Bosch drew a wave of artists and writers to the coastline, establishing Big Sur's identity as a creative sanctuary.</li>
+        <li>Morro Rock, the 581-foot volcanic plug rising from Morro Bay, is one of nine ancient volcanic peaks called the "Nine Sisters" that stretch 12 miles inland from the bay to San Luis Obispo. They formed 20 to 30 million years ago and are not connected underground.</li>
+        <li>McWay Falls, the 80-foot waterfall you'll see from the roadside pullout at Julia Pfeiffer Burns State Park, is classified as a "tidefalls": one of only two in California where the waterfall drops directly onto a tidal beach. It only reaches the ocean at high tide.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="day" id="sunday">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="num">05 &middot; Sunday, June 28</span>
+      <h2>Departure Day</h2>
+      <p class="tagline">No plans. Just vibes.</p>
+
+    </div>
+    <p class="day-intro reveal">Breakfast, big hugs, then back on the road home.</p>
+
+    <div class="timeline">
+      <div class="entry reveal">
+        <div class="entry__time"><span class="entry__clock">Morning</span><span class="entry__sub">In a hurry</span></div>
+        <div class="entry__content">
+          <div class="entry__title">Breakfast at the Hampton Inn  <span class="badge badge--optional">Optional</span></div>
+          <p>Free hot breakfast? Or at the very least, free hotel coffee before we start the drive home.</p>
+        </div>
+      </div>
+
+      <div class="entry reveal">
+        <div class="entry__time"><span class="entry__clock">Morning</span><span class="entry__sub">Less rushed</span></div>
+        <div class="entry__content">
+          <div class="entry__title">Avila Beach promenade &amp; Harford Pier <span class="badge badge--optional">Optional</span></div>
+          <p>A small, palm-lined beach town with an easy waterfront promenade, and a historic pier that's one of the few in the country you can still drive partway out on. Sea lions sometimes haul out near the pier. Fat Cat's Cafe at the foot of the pier is a good spot for coffee.</p>
+          <p>Avila Beach fills quickly on sunny Sunday mornings. Earlier is better for parking near the pier.</p>
+          <span class="addr">Front St, Avila Beach, CA 93424</span>
+        </div>
+      </div>
+
+      <div class="entry reveal">
+        <div class="entry__time"><span class="entry__clock">Mid-morning</span><span class="entry__sub">~15 min drive </span></div>
+        <div class="entry__content">
+          <div class="entry__title">Stroll through downtown SLO <span class="badge badge--optional">Optional</span></div>
+          <p>Last pass through Higuera and Marsh Streets or a quiet walk along Mission Plaza if we didn't see any of this on Saturday.</p>
+        </div>
+      </div>
+
+      <div class="entry reveal">
+        <div class="entry__time"><span class="entry__clock">Noon</span><span class="entry__sub">Last meal together</span></div>
+        <div class="entry__content">
+          <div class="entry__title">Lunch at Lure Fish House <span class="badge badge--optional">Optional</span></div>
+          <p>Nice lunch option if people aren't in a rush to get on the road. Known for fresh, sustainably-sourced seafood house. Sandwiches, salads, and milder options available.</p>
+          <span class="addr">1101 Monterey St, San Luis Obispo, CA 93401 &middot; (805) 586-1356</span>
+          <a class="gallery-link" href="https://www.lurefishhouse.com/location/san-luis-obispo/" target="_blank" rel="noopener">Menu &amp; photos</a>
+        </div>
+      </div>
+
+      <div class="entry reveal">
+        <div class="entry__time"><span class="entry__clock">Bye!</span><span class="entry__sub">Love y'all!</span></div>
+        <div class="entry__content">
+          <div class="entry__title">On the road again...</div>
+          <p> </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="trivia-card reveal">
+      <span class="eyebrow">Did You Know?</span>
+      <h4>Sunday Trivia</h4>
+      <ul>
+        <li>Avila Beach's Harford Pier was built in 1873 by entrepreneur John Harford, who needed a wharf long enough to reach deep water for the cargo steamers that supplied the Central Coast. At its busiest, ships arrived several times a week carrying as many as 90 passengers and 200 tons of freight. It is one of the few commercial piers in California where cars are still permitted to drive out.</li>
+        <li>Mission San Luis Obispo de Tolosa, founded in 1772 by Padre Junípero Serra, was the fifth of California's 21 missions. The city that grew around it took its name directly from the mission, not the other way around. "San Luis Obispo" refers to Saint Louis IX of France, also known as Louis of Anjou.</li>
+        <li>Lure Fish House has been a downtown SLO fixture since 2012 and is focused on sustainably sourced seafood. The menu rotates based on seasonality and what's available locally from MSC-certified fisheries and ASC-recognized farms.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="day" id="know-before">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="num">06 &middot; Reference</span>
+      <h2>Know Before We Go</h2>
+      <p class="tagline">Neighborhoods, any local etiquette, and requisite fallback plans.</p>
+    </div>
+
+    <h4 style="margin-top:6px;">The four places we'll spend time</h4>
+    <div class="card-grid reveal">
+      <div class="info-card">
+        <h4>San Luis Obispo <span class="tag">Home base</span></h4>
+        <p style="font-size:14px; color:var(--ink-soft); margin:0;">A walkable college town built around Mission Plaza and a creek running through downtown. Most of the trip's anchor points sit within a few minutes of here.</p>
+        <dl>
+          <dt>Known for</dt><dd>Thursday Night Farmers' Market, Mission San Luis Obispo de Tolosa, Bubblegum Alley</dd>
+        </dl>
+      </div>
+      <div class="info-card">
+        <h4>Morro Bay <span class="tag">~20 min away</span></h4>
+        <p style="font-size:14px; color:var(--ink-soft); margin:0;">A working harbor town dominated by the 581-foot volcanic plug of Morro Rock, with sea otters reliably visible from the Embarcadero.</p>
+        <dl>
+          <dt>Known for</dt><dd>Sea otters, Morro Rock, fresh seafood right on the harbor</dd>
+        </dl>
+      </div>
+      <div class="info-card">
+        <h4>Cambria <span class="tag">~35 min away</span></h4>
+        <p style="font-size:14px; color:var(--ink-soft); margin:0;">A small arts-and-crafts village along Moonstone Beach Drive, often the first stop on the Hearst Castle drive.</p>
+        <dl>
+          <dt>Known for</dt><dd>Independent galleries, bakeries, the Moonstone Beach boardwalk</dd>
+        </dl>
+      </div>
+      <div class="info-card">
+        <h4>Ragged Point <span class="tag">~1 hr 15 min away</span></h4>
+        <p style="font-size:14px; color:var(--ink-soft); margin:0;">The southern gateway to Big Sur, 15 miles north of Hearst Castle, perched 350 feet above the Pacific on what is one of the most dramatic stretches of coastal highway in the country.</p>
+        <dl>
+          <dt>Known for</dt><dd>Clifftop views, the drive itself, Ragged Point Restaurant with floor-to-ceiling ocean views</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="info-card reveal" style="margin:18px 0; grid-column:1/-1;">
+      <h4>Big Sur <span class="tag">~2&ndash;3.5 hrs away &middot; Saturday Options A &amp; B</span></h4>
+      <p style="font-size:14px; color:var(--ink-soft); margin:0 0 12px;">A 90-mile stretch of Highway 1 between Ragged Point and Carmel. One of the most photographed coastlines in the world. Most of it has no cell signal, so download offline maps before you leave Morro Bay.</p>
+      <dl>
+        <dt>Key stops going north from Ragged Point</dt>
+        <dd>Limekiln State Park (~20 min) &middot; Julia Pfeiffer Burns / McWay Falls (~55 min) &middot; Nepenthe &amp; Henry Miller Library (~1 hr 10 min) &middot; Pfeiffer Beach (~1 hr 15 min) &middot; Hurricane Point / Bixby Bridge (~2 hr 15 min)</dd>
+        <dt>Current closures (as of June 2026)</dt>
+        <dd>McWay Falls Overlook Trail closed for retaining wall repair; falls visible from Hwy 1 pullout only. Limekiln Falls Trail and Hare Creek Trail closed; main Limekiln Trail open. Highway 1 fully reopened January 14, 2026 after 3-year Regent's Slide closure.</dd>
+        <dt>Cell coverage</dt>
+        <dd>Essentially none for 40+ mile stretches. Verizon works at Ragged Point and Nepenthe. Download offline maps before leaving Morro Bay.</dd>
+        <dt>Gas</dt>
+        <dd>Fill up in Morro Bay. The next reliable station northbound is Gorda (~45 miles north of Ragged Point), which closes at 5 PM.</dd>
+      </dl>
+    </div>
+
+    <h4 style="margin-top:34px;">Local etiquette to keep in mind</h4>
+    <div class="etiquette-grid reveal">
+      <div class="etiquette-item">
+        <span class="et-label">Wildlife viewing</span>
+        <p>Stay on the boardwalks and behind the rope lines at the elephant seal viewing area. These are wild animals, and the distance is for everyone's safety.</p>
+      </div>
+      <div class="etiquette-item">
+        <span class="et-label">Winery tastings</span>
+        <p>Even where tastings are complimentary, a few dollars per person or a bottle purchase is the customary thank-you to the pourer. Outside food generally isn't allowed in tasting rooms.</p>
+      </div>
+      <div class="etiquette-item">
+        <span class="et-label">Farmers' market</span>
+        <p>SLO County has banned most single-use plastic bags, so bring totes if you plan to shop. It's a party as much as a market, so graze slowly and don't rush the vendor stalls.</p>
+      </div>
+      <div class="etiquette-item">
+        <span class="et-label">Restaurant norms</span>
+        <p>Several restaurants on this trip are walk-in only for small parties. Arriving right at opening is the local trick. Don't try to negotiate with the host at Giuseppe's, which doesn't work.</p>
+      </div>
+      <div class="etiquette-item">
+        <span class="et-label">Highway 1 pullouts</span>
+        <p>Use the marked vista points and pullouts for photos. Never stop in the traffic lane: the road carries cyclists and tour buses, and the shoulders can be narrow. If driving slowly for views, use pullouts and let faster traffic past.</p>
+      </div>
+      <div class="etiquette-item">
+        <span class="et-label">Park &amp; trail closures</span>
+        <p>Big Sur parks close trails frequently due to fire damage, slides, and construction. Always check California State Parks and Caltrans QuickMap before driving. Closed areas are enforced and trespassing into closed zones at Julia Pfeiffer Burns has resulted in rescues and citations.</p>
+      </div>
+    </div>
+
+    <h4 style="margin-top:34px;">Fallbacks &amp; contingencies</h4>
+    <details class="alt-item reveal">
+      <summary>What if Giuseppe's has a wait when we arrive?</summary>
+      <p>Even arriving at opening, Saturdays can draw a short line. The patio and gelato counter make for a pleasant wait. Novo Restaurant, a few blocks away at 726 Higuera St, has creekside patio dining and is a strong backup. Or call Cafe Roma (1020 Railroad Ave), a 45-year family Italian, reservation-friendly.</p>
+    </details>
+    <details class="alt-item reveal">
+      <summary>What if someone wants a different Hearst Castle experience on the day?</summary>
+      <p>Hearst Castle staff can suggest alternate tours and route options. The property has Accessibly Designed Tours available as well. Worth a quick call to (805) 927-2020 ahead of time if the group wants to know all the options before arriving.</p>
+    </details>
+    <details class="alt-item reveal">
+      <summary>What if the marine layer hasn't cleared by mid-morning?</summary>
+      <p>June gloom occasionally lingers past 11 AM. It won't affect Hearst Castle access, the hilltop usually sits above the fog line. Pack a light layer for the morning coastal legs. Big Sur cliffs often stay socked in longer than SLO, so coastal views on Saturday's Option A or B may be hazier in the morning.</p>
+    </details>
+    <details class="alt-item reveal">
+      <summary>What if a Big Sur park, trail, or beach is closed when we get there?</summary>
+      <p>Known current closures are listed in the Big Sur info card above, but conditions change. If McWay Falls trail is still closed, the roadside Hwy 1 pullout gives a good view at no cost. If Limekiln trails are closed, the short walk to the kiln ruins may still be accessible; check at the entrance kiosk. If Pfeiffer Beach is closed or the lot is full, Sand Dollar Beach (~10 miles south of Julia Pfeiffer) is less crowded and often open when others fill. Check current status at parks.ca.gov and roads.dot.ca.gov before leaving.</p>
+    </details>
+    <details class="alt-item reveal">
+      <summary>What if elephant seal numbers are low at Piedras Blancas?</summary>
+      <p>Late June is molting season, not peak season, so counts will be lower than January or April. A completely empty beach is extremely rare year-round. Spend 15 minutes, take the coastal bluff view, and move on. The Friends of the Elephant Seal site posts live seasonal updates at elephantseal.org.</p>
+    </details>
+  </div>
+</section>
+
+<section class="day" id="sources">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="num">07 &middot; Reference</span>
+      <h2>Sources of Information</h2>
+      <p class="tagline">Cite your sources, every time!</p>
+    </div>
+    <div class="sources-grid reveal">
+      <div class="source-cat">
+        <h4>Lodging</h4>
+        <ul>
+          <li><a href="https://www.madonnainn.com/" target="_blank" rel="noopener">Madonna Inn, official site</a></li>
+          <li><a href="https://www.hilton.com/en/hotels/sbplohx-hampton-suites-san-luis-obispo/hotel-info/" target="_blank" rel="noopener">Hampton Inn &amp; Suites SLO, Hilton property page</a></li>
+        </ul>
+      </div>
+      <div class="source-cat">
+        <h4>Dining</h4>
+        <ul>
+          <li><a href="https://www.madonnainn.com/goldrush-steakhouse" target="_blank" rel="noopener">Alex Madonna's Gold Rush Steak House</a></li>
+          <li><a href="https://www.giuseppesrestaurant.com/" target="_blank" rel="noopener">Giuseppe's Cucina Rustica, official site</a></li>
+          <li><a href="https://www.yelp.com/biz/giuseppes-cucina-rustica-san-luis-obispo-3" target="_blank" rel="noopener">Giuseppe's hours &amp; reservation policy, Yelp</a></li>
+          <li><a href="https://www.firestonegrill.com/" target="_blank" rel="noopener">Firestone Grill, official site</a></li>
+          <li><a href="https://www.lurefishhouse.com/location/san-luis-obispo/" target="_blank" rel="noopener">Lure Fish House SLO, official site</a></li>
+          <li><a href="https://www.novorestaurant.com/" target="_blank" rel="noopener">Novo Restaurant &amp; Lounge, official site</a></li>
+          <li><a href="https://www.raggedpointinn.com/restaurant" target="_blank" rel="noopener">Ragged Point Restaurant, official site</a></li>
+          <li><a href="https://www.nepenthebigsur.com/" target="_blank" rel="noopener">Nepenthe, official site</a></li>
+        </ul>
+      </div>
+      <div class="source-cat">
+        <h4>Hearst Castle</h4>
+        <ul>
+          <li><a href="https://hearstcastle.org/tour-hearst-castle/daily-tours/julia-morgan-tour/" target="_blank" rel="noopener">Julia Morgan Tour, official Hearst Castle page</a></li>
+          <li><a href="https://hearstcastle.org" target="_blank" rel="noopener">Hearst Castle, official site</a></li>
+          <li><a href="https://www.hearstranch.com/hearst-ranch-winery/" target="_blank" rel="noopener">Hearst Ranch Winery, San Simeon</a></li>
+        </ul>
+      </div>
+      <div class="source-cat">
+        <h4>Wildlife</h4>
+        <ul>
+          <li><a href="https://elephantseal.org/plan-your-visit/" target="_blank" rel="noopener">Friends of the Elephant Seal, visiting info</a></li>
+          <li><a href="https://elephantseal.org/" target="_blank" rel="noopener">Friends of the Elephant Seal, seasonal updates</a></li>
+          <li><a href="https://www.morrobay.org/blog/morro-bay-sealebrities/" target="_blank" rel="noopener">Visit Morro Bay, otter viewing spots</a></li>
+        </ul>
+      </div>
+      <div class="source-cat">
+        <h4>Coastal drive &amp; Big Sur</h4>
+        <ul>
+          <li><a href="https://www.raggedpointinn.com/" target="_blank" rel="noopener">Ragged Point Inn, official site</a></li>
+          <li><a href="https://highway1roadtrip.com/things-to-do/gateway-to-big-sur/" target="_blank" rel="noopener">Highway 1 Road Trip, Ragged Point guide</a></li>
+          <li><a href="https://www.slocal.com/blog/post/pacific-coast-highway-stops-northern-slo-cal-to-big-sur/" target="_blank" rel="noopener">Visit SLO CAL, Hwy 1 stops SLO to Big Sur</a></li>
+          <li><a href="https://www.parks.ca.gov/?page_id=577" target="_blank" rel="noopener">Limekiln State Park, California State Parks</a></li>
+          <li><a href="https://www.parks.ca.gov/?page_id=578" target="_blank" rel="noopener">Julia Pfeiffer Burns State Park, California State Parks</a></li>
+          <li><a href="https://www.henrymiller.org/" target="_blank" rel="noopener">Henry Miller Memorial Library, official site</a></li>
+          <li><a href="https://www.nepenthebigsur.com/" target="_blank" rel="noopener">Nepenthe, official site</a></li>
+        </ul>
+      </div>
+      <div class="source-cat">
+        <h4>Local culture &amp; practical info</h4>
+        <ul>
+          <li><a href="https://visitslo.com/things-to-do/attractions/farmers-market/farmers-markets-every-day-around-san-luis-obispo/" target="_blank" rel="noopener">Visit SLO, county farmers' market schedule</a></li>
+          <li><a href="https://highway1roadtrip.com/highway-1-road-closures/" target="_blank" rel="noopener">Highway 1 road status &amp; closure history</a></li>
+          <li><a href="https://roads.dot.ca.gov/" target="_blank" rel="noopener">Caltrans road conditions (official real-time)</a></li>
+          <li><a href="https://www.parks.ca.gov/" target="_blank" rel="noopener">California State Parks (trail/park closures)</a></li>
+          <li><a href="https://www.gov.ca.gov/2026/01/14/governor-newsom-announces-early-reopening-of-highway-1-through-big-sur/" target="_blank" rel="noopener">Highway 1 Regent's Slide reopening announcement, Jan 14 2026</a></li>
+        </ul>
+      </div>
+      <div class="source-cat">
+        <h4>Weather &amp; conditions</h4>
+        <ul>
+          <li><a href="https://www.foxweather.com/local-weather/california/san-luis-obispo" target="_blank" rel="noopener">Fox Weather, SLO forecast (used for June 25&ndash;28 data)</a></li>
+          <li><a href="https://weatherspark.com/y/1286/Average-Weather-in-San-Luis-Obispo-California-United-States-Year-Round" target="_blank" rel="noopener">WeatherSpark, San Luis Obispo climate averages</a></li>
+          <li><a href="https://www.ndbc.noaa.gov/data/Forecasts/FZUS56.KMTR.html" target="_blank" rel="noopener">NOAA National Data Buoy Center, marine forecast</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span class="eyebrow">San Luis Obispo &middot; June 25&ndash;28, 2026</span>
+    <p>Designed for maximum quality time with family.</p>
+    <div class="fine">Built with a lot of love and very little sleep by JT.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* Dark mode toggle */
+  var btn = document.getElementById('theme-toggle');
+  var saved = localStorage.getItem('slo-theme');
+  if(saved === 'dark'){ document.documentElement.setAttribute('data-theme','dark'); btn.textContent = '\u2600'; }
+  if(btn){ btn.addEventListener('click', function(){
+    var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    if(isDark){
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('slo-theme','light');
+      btn.textContent = '\u263D';
+    } else {
+      document.documentElement.setAttribute('data-theme','dark');
+      localStorage.setItem('slo-theme','dark');
+      btn.textContent = '\u2600';
+    }
+  }); }
+
+  var els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    els.forEach(function(el){ el.classList.add('show'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(function(el){ io.observe(el); });
+
+  var sections = document.querySelectorAll('section[id]');
+  var navLinks = document.querySelectorAll('.nav-link');
+  if(sections.length && navLinks.length && 'IntersectionObserver' in window){
+    var navMap = {};
+    navLinks.forEach(function(link){
+      var id = link.getAttribute('href').replace('#','');
+      navMap[id] = link;
+    });
+    var navIo = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        var link = navMap[entry.target.id];
+        if(!link) return;
+        if(entry.isIntersecting){
+          navLinks.forEach(function(l){ l.classList.remove('active'); });
+          link.classList.add('active');
+        }
+      });
+    }, { threshold: 0, rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(function(s){ navIo.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>
